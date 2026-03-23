@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zonnepanelen Rotterdam – Gratis Offertes Vergelijken</title>
+<meta name="description" content="Bespaar direct op je energiekosten. Ontvang gratis en vrijblijvend offertes van erkende zonnepanelen installateurs in Rotterdam.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sun: #F5A623;
+    --sun-light: #FFD580;
+    --green: #2D7D46;
+    --green-light: #3A9E5A;
+    --dark: #0F1923;
+    --dark2: #162130;
+    --white: #FFFFFF;
+    --off-white: #F7F9F7;
+    --text: #1A2B1A;
+    --muted: #6B7B6B;
+    --border: #E2EAE2;
+    --sky: #EAF4FF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--dark);
+    text-decoration: none;
+  }
+  .nav-logo .sun-icon {
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--sun), var(--sun-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .nav-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #E8F5E9;
+    color: var(--green);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+  .nav-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: blink 2s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* HERO */
+  .hero {
+    padding-top: 64px;
+    background: linear-gradient(160deg, var(--dark) 0%, var(--dark2) 60%, #1A3A2A 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+  }
+
+  .hero-orbs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+  }
+  .orb-1 {
+    width: 500px; height: 500px;
+    background: rgba(245,166,35,0.12);
+    top: -100px; right: -100px;
+    animation: drift 8s ease-in-out infinite;
+  }
+  .orb-2 {
+    width: 300px; height: 300px;
+    background: rgba(45,125,70,0.15);
+    bottom: 0; left: 10%;
+    animation: drift 10s ease-in-out infinite reverse;
+  }
+  @keyframes drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+  }
+
+  .hero-left {
+    padding: 80px 64px 80px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-trust-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .trust-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.8);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 100px;
+  }
+  .trust-pill .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--sun);
+    flex-shrink: 0;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+  h1 .highlight {
+    color: var(--sun);
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 440px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .btn-main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--sun), #E8901A);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 18px 36px;
+    border-radius: 4px;
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(245,166,35,0.35);
+    width: fit-content;
+  }
+  .btn-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(245,166,35,0.45);
+  }
+
+  .hero-note {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hero-numbers {
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-num-item {}
+  .hero-num {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+  }
+  .hero-num span { color: var(--sun); }
+  .hero-num-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  /* HERO FORM (right side) */
+  .hero-right {
+    padding: 80px 80px 80px 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-form-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 40px 36px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+    position: relative;
+  }
+  .hero-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sun), var(--green));
+    border-radius: 8px 8px 0 0;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .form-sub {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .form-group { margin-bottom: 14px; }
+
+  label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
+    background: var(--off-white);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    transition: all 0.2s;
+    border-radius: 4px;
+    appearance: none;
+  }
+  input:focus, select:focus {
+    border-color: var(--green);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(45,125,70,0.1);
+  }
+  input::placeholder { color: #B0BCB0; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    color: var(--white);
+    border: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.25s;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 6px 20px rgba(45,125,70,0.3);
+    letter-spacing: 0.01em;
+  }
+  .submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(45,125,70,0.4);
+  }
+  .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+  .form-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+  }
+  .form-trust-item {
+    font-size: 0.7rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .form-trust-item span:first-child { color: var(--green); }
+
+  .success-msg {
+    display: none;
+    text-align: center;
+    padding: 32px 0;
+  }
+  .success-msg .check {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+    animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  }
+  @keyframes pop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+  .success-msg h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .success-msg p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* TRUST BAND */
+  .trust-band {
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .trust-band-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .trust-band-icon {
+    width: 36px; height: 36px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* VOORDELEN */
+  .voordelen {
+    padding: 96px 80px;
+    background: var(--white);
+  }
+
+  .section-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    width: 24px; height: 2px;
+    background: var(--green);
+    border-radius: 2px;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 56px;
+    max-width: 540px;
+    color: var(--text);
+  }
+
+  .voordelen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .voordeel {
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 36px 32px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .voordeel::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sun), var(--green));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+  .voordeel:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(45,125,70,0.1);
+  }
+  .voordeel:hover::after { transform: scaleX(1); }
+
+  .voordeel-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .voordeel-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+
+  .voordeel-text {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* HOE HET WERKT */
+  .hoe {
+    padding: 96px 80px;
+    background: linear-gradient(160deg, var(--dark), var(--dark2));
+    position: relative;
+    overflow: hidden;
+  }
+  .hoe::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(245,166,35,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hoe .section-eyebrow { color: var(--sun); }
+  .hoe .section-eyebrow::before { background: var(--sun); }
+  .hoe .section-title { color: var(--white); }
+
+  .stappen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    position: relative;
+  }
+
+  .stap {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 40px 36px;
+    position: relative;
+    transition: background 0.25s;
+  }
+  .stap:hover { background: rgba(255,255,255,0.07); }
+
+  .stap-num {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(245,166,35,0.15);
+    line-height: 1;
+    margin-bottom: 20px;
+    letter-spacing: -0.04em;
+  }
+
+  .stap-icon {
+    width: 44px; height: 44px;
+    background: rgba(245,166,35,0.1);
+    border: 1px solid rgba(245,166,35,0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+
+  .stap-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .stap-text {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .stap-connector {
+    position: absolute;
+    top: 50px;
+    right: -20px;
+    color: rgba(245,166,35,0.3);
+    font-size: 1.2rem;
+    z-index: 2;
+  }
+
+  /* BOTTOM CTA */
+  .bottom-cta {
+    padding: 96px 80px;
+    background: var(--off-white);
+    text-align: center;
+  }
+
+  .bottom-cta .section-eyebrow { justify-content: center; }
+  .bottom-cta .section-eyebrow::before { display: none; }
+
+  .bottom-cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: var(--text);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+  }
+
+  .bottom-cta p {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .bottom-form-wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+    text-align: left;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    padding: 32px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+  footer .nav-logo { color: var(--white); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-left > * {
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-left > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.25s; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.35s; }
+  .hero-left > *:nth-child(5) { animation-delay: 0.45s; }
+  .hero-right {
+    animation: fadeUp 0.6s ease 0.3s both;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 80px 40px 40px; }
+    .hero-right { padding: 0 40px 80px; }
+    .hero-form-card { max-width: 560px; }
+    .hero-stats { gap: 24px; }
+    .voordelen, .hoe, .bottom-cta { padding: 72px 40px; }
+    .trust-band { padding: 20px 40px; gap: 24px; }
+    footer { padding: 24px 40px; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .hero-left { padding: 72px 20px 32px; }
+    .hero-right { padding: 0 20px 64px; }
+    .voordelen-grid { grid-template-columns: 1fr; }
+    .stappen-grid { grid-template-columns: 1fr; }
+    .stap-connector { display: none; }
+    .trust-band { padding: 20px; gap: 16px; flex-direction: column; align-items: flex-start; }
+    .voordelen, .hoe, .bottom-cta { padding: 64px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-numbers { gap: 24px; }
+    footer { padding: 24px 20px; flex-direction: column; text-align: center; }
+    .bottom-form-wrap { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="sun-icon">☀️</div>
+    ZonneOfferte.nl
+  </div>
+  <div class="nav-badge">Gratis & vrijblijvend</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div class="hero-left">
+    <div class="hero-trust-bar">
+      <div class="trust-pill"><span class="dot"></span> Gecertificeerde installateurs</div>
+      <div class="trust-pill"><span class="dot"></span> 100% gratis</div>
+      <div class="trust-pill"><span class="dot"></span> Binnen 24u reactie</div>
+    </div>
+
+    <h1>Bespaar direct op je energiekosten met <span class="highlight">zonnepanelen</span> in Rotterdam</h1>
+
+    <p class="hero-sub">
+      Ontvang gratis en vrijblijvend offertes van erkende installateurs in jouw regio. Vergelijk en kies de beste aanbieder voor jouw woning.
+    </p>
+
+    <div class="hero-cta-group">
+      <a href="#offerte" class="btn-main">
+        ☀️ Vraag gratis offertes aan
+      </a>
+      <div class="hero-note">
+        ✓ Gratis &nbsp;·&nbsp; ✓ Vrijblijvend &nbsp;·&nbsp; ✓ Binnen 24 uur
+      </div>
+    </div>
+
+    <div class="hero-numbers">
+      <div class="hero-num-item">
+        <div class="hero-num">€ 1.200<span>+</span></div>
+        <div class="hero-num-label">gemiddelde jaarlijkse besparing</div>
+      </div>
+      <div class="hero-num-item">
+        <div class="hero-num">7<span>-</span>9</div>
+        <div class="hero-num-label">jaar gemiddelde terugverdientijd</div>
+      </div>
+      <div class="hero-num-item">
+        <div class="hero-num">30<span>+</span></div>
+        <div class="hero-num-label">jaar levensduur panelen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO FORM -->
+  <div class="hero-right">
+    <div class="hero-form-card" id="offerte">
+      <div class="form-title">Ontvang gratis offertes</div>
+      <div class="form-sub">Vul je gegevens in — wij regelen de rest. Gratis en vrijblijvend.</div>
+
+      <form id="heroForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="naam">Voornaam</label>
+            <input type="text" id="naam" name="naam" placeholder="Jan" />
+          </div>
+          <div class="form-group">
+            <label for="achternaam">Achternaam</label>
+            <input type="text" id="achternaam" name="achternaam" placeholder="de Vries" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mailadres</label>
+          <input type="email" id="email" name="email" placeholder="jan@email.nl" />
+        </div>
+        <div class="form-group">
+          <label for="telefoon">Telefoonnummer</label>
+          <input type="tel" id="telefoon" name="telefoon" placeholder="06 12 34 56 78" />
+        </div>
+        <div class="form-group">
+          <label for="postcode">Postcode</label>
+          <input type="text" id="postcode" name="postcode" placeholder="3011 AB" />
+        </div>
+        <div class="form-group">
+          <label for="woning">Type woning</label>
+          <select id="woning" name="woning">
+            <option value="">Selecteer type woning</option>
+            <option>Vrijstaande woning</option>
+            <option>Twee-onder-één-kap</option>
+            <option>Rijtjeswoning</option>
+            <option>Hoekwoning</option>
+            <option>Appartement</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn" id="heroSubmitBtn">
+          Ontvang gratis offertes →
+        </button>
+        <div class="form-trust">
+          <div class="form-trust-item"><span>✓</span> Gratis</div>
+          <div class="form-trust-item"><span>✓</span> Vrijblijvend</div>
+          <div class="form-trust-item"><span>🔒</span> Veilig</div>
+        </div>
+      </form>
+
+      <div class="success-msg" id="heroSuccess">
+        <div style="text-align:center; padding: 20px 0;">
+          <div style="width:72px;height:72px;background:linear-gradient(135deg,#E8F5E9,#C8E6C9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 20px;animation:pop 0.5s cubic-bezier(0.175,0.885,0.32,1.275) both;">✅</div>
+          <h4 style="font-size:1.3rem;font-weight:800;margin-bottom:10px;color:var(--text);">Aanvraag ontvangen!</h4>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:24px;">Bedankt! Erkende installateurs in Rotterdam nemen binnen 24 uur contact met je op met een gratis offerte op maat.</p>
+          <div style="background:var(--off-white);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:left;margin-bottom:24px;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px;">Wat gebeurt er nu?</div>
+            <div style="display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;">
+              <div style="width:22px;height:22px;background:linear-gradient(135deg,var(--sun),#E8901A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:white;flex-shrink:0;">1</div>
+              <div style="font-size:0.83rem;color:var(--text);line-height:1.5;"><strong>Binnen 24 uur</strong> nemen gecertificeerde installateurs contact op.</div>
+            </div>
+            <div style="display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;">
+              <div style="width:22px;height:22px;background:linear-gradient(135deg,var(--sun),#E8901A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:white;flex-shrink:0;">2</div>
+              <div style="font-size:0.83rem;color:var(--text);line-height:1.5;"><strong>Je ontvangt offertes op maat</strong> voor jouw woning en situatie.</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <div style="width:22px;height:22px;background:linear-gradient(135deg,var(--sun),#E8901A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:white;flex-shrink:0;">3</div>
+              <div style="font-size:0.83rem;color:var(--text);line-height:1.5;"><strong>Jij kiest zelf</strong> de beste aanbieder. Geen verplichtingen.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+            <div style="font-size:0.72rem;color:var(--muted);display:flex;align-items:center;gap:4px;"><span style="color:var(--green);">✓</span> Gratis & vrijblijvend</div>
+            <div style="font-size:0.72rem;color:var(--muted);display:flex;align-items:center;gap:4px;"><span style="color:var(--green);">✓</span> Gecertificeerde installateurs</div>
+            <div style="font-size:0.72rem;color:var(--muted);display:flex;align-items:center;gap:4px;">🔒 Privacy gewaarborgd</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAND -->
+<div class="trust-band">
+  <div class="trust-band-item">
+    <div class="trust-band-icon">✅</div>
+    Erkende installateurs
+  </div>
+  <div class="trust-band-item">
+    <div class="trust-band-icon">🆓</div>
+    Altijd gratis & vrijblijvend
+  </div>
+  <div class="trust-band-item">
+    <div class="trust-band-icon">⚡</div>
+    Binnen 24 uur reactie
+  </div>
+  <div class="trust-band-item">
+    <div class="trust-band-icon">🔒</div>
+    Privacybeschermd
+  </div>
+</div>
+
+<!-- VOORDELEN -->
+<section class="voordelen">
+  <p class="section-eyebrow">Waarom zonnepanelen</p>
+  <h2 class="section-title">De slimste investering voor je woning</h2>
+
+  <div class="voordelen-grid">
+    <div class="voordeel">
+      <div class="voordeel-icon">💰</div>
+      <div class="voordeel-title">Bespaar op energiekosten</div>
+      <p class="voordeel-text">Huishoudens besparen gemiddeld €1.200 per jaar op hun energierekening. Met stijgende energieprijzen wordt dit alleen maar meer.</p>
+    </div>
+    <div class="voordeel">
+      <div class="voordeel-icon">🌱</div>
+      <div class="voordeel-title">Duurzaam & toekomstgericht</div>
+      <p class="voordeel-text">Verklein je CO₂-voetafdruk en draag bij aan een schone toekomst. Zonnepanelen gaan gemiddeld 30 jaar mee.</p>
+    </div>
+    <div class="voordeel">
+      <div class="voordeel-icon">🏠</div>
+      <div class="voordeel-title">Hogere woningwaarde</div>
+      <p class="voordeel-text">Een woning met zonnepanelen is gemiddeld €15.000 meer waard. Een slimme investering die zichzelf dubbel terugbetaalt.</p>
+    </div>
+    <div class="voordeel">
+      <div class="voordeel-icon">⚡</div>
+      <div class="voordeel-title">Snelle installatie</div>
+      <p class="voordeel-text">Installatie is binnen één dag klaar. Uw panelen leveren al stroom op de dag zelf. Minimale overlast, maximaal resultaat.</p>
+    </div>
+    <div class="voordeel">
+      <div class="voordeel-icon">🛡️</div>
+      <div class="voordeel-title">Garantie & zekerheid</div>
+      <p class="voordeel-text">Alle installateurs zijn gecertificeerd en bieden minimaal 10 jaar productgarantie. U zit altijd goed.</p>
+    </div>
+    <div class="voordeel">
+      <div class="voordeel-icon">📊</div>
+      <div class="voordeel-title">Vergelijk & kies zelf</div>
+      <p class="voordeel-text">Ontvang meerdere offertes en kies zelf de beste prijs-kwaliteitverhouding. Geen verplichtingen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOE HET WERKT -->
+<section class="hoe">
+  <p class="section-eyebrow">Hoe het werkt</p>
+  <h2 class="section-title">In 3 stappen naar gratis offertes</h2>
+
+  <div class="stappen-grid">
+    <div class="stap">
+      <div class="stap-num">01</div>
+      <div class="stap-icon">📋</div>
+      <div class="stap-title">Vul het formulier in</div>
+      <p class="stap-text">Vul je gegevens en postcode in. Duurt minder dan 2 minuten. Volledig gratis en zonder verplichtingen.</p>
+    </div>
+    <div class="stap">
+      <div class="stap-num">02</div>
+      <div class="stap-icon">📩</div>
+      <div class="stap-title">Ontvang offertes</div>
+      <p class="stap-text">Binnen 24 uur nemen gecertificeerde installateurs uit jouw regio contact op met een offerte op maat voor jouw woning.</p>
+    </div>
+    <div class="stap">
+      <div class="stap-num">03</div>
+      <div class="stap-icon">✅</div>
+      <div class="stap-title">Kies de beste aanbieder</div>
+      <p class="stap-text">Vergelijk de offertes en kies zelf wie je woning installeert. Jij beslist — geen druk, geen verplichtingen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <p class="section-eyebrow">Gratis offerte aanvragen</p>
+  <h2>Klaar om te besparen op je energierekening?</h2>
+  <p>Vul het formulier in en ontvang gratis offertes van erkende installateurs in Rotterdam.</p>
+
+  <div class="bottom-form-wrap">
+    <div class="form-title" style="margin-bottom:6px;">Vraag gratis offertes aan</div>
+    <div class="form-sub" style="margin-bottom:20px;">Gratis, vrijblijvend en binnen 24 uur reactie.</div>
+
+    <form id="bottomForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="naam2">Voornaam</label>
+          <input type="text" id="naam2" name="naam" placeholder="Jan" />
+        </div>
+        <div class="form-group">
+          <label for="achternaam2">Achternaam</label>
+          <input type="text" id="achternaam2" name="achternaam" placeholder="de Vries" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email2">E-mailadres</label>
+        <input type="email" id="email2" name="email" placeholder="jan@email.nl" />
+      </div>
+      <div class="form-group">
+        <label for="telefoon2">Telefoonnummer</label>
+        <input type="tel" id="telefoon2" name="telefoon" placeholder="06 12 34 56 78" />
+      </div>
+      <div class="form-group">
+        <label for="postcode2">Postcode</label>
+        <input type="text" id="postcode2" name="postcode" placeholder="3011 AB" />
+      </div>
+      <div class="form-group">
+        <label for="woning2">Type woning</label>
+        <select id="woning2" name="woning">
+          <option value="">Selecteer type woning</option>
+          <option>Vrijstaande woning</option>
+          <option>Twee-onder-één-kap</option>
+          <option>Rijtjeswoning</option>
+          <option>Hoekwoning</option>
+          <option>Appartement</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn" id="bottomSubmitBtn">
+        Ontvang gratis offertes →
+      </button>
+      <div class="form-trust" style="margin-top:14px;">
+        <div class="form-trust-item"><span>✓</span> Gratis</div>
+        <div class="form-trust-item"><span>✓</span> Vrijblijvend</div>
+        <div class="form-trust-item"><span>🔒</span> Veilig</div>
+      </div>
+    </form>
+
+    <div class="success-msg" id="bottomSuccess">
+      <div style="text-align:center; padding: 20px 0;">
+          <div style="width:72px;height:72px;background:linear-gradient(135deg,#E8F5E9,#C8E6C9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 20px;animation:pop 0.5s cubic-bezier(0.175,0.885,0.32,1.275) both;">✅</div>
+          <h4 style="font-size:1.3rem;font-weight:800;margin-bottom:10px;color:var(--text);">Aanvraag ontvangen!</h4>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:24px;">Bedankt! Erkende installateurs in Rotterdam nemen binnen 24 uur contact met je op met een gratis offerte op maat.</p>
+          <div style="background:var(--off-white);border:1px solid var(--border);border-radius:8px;padding:20px;text-align:left;margin-bottom:24px;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px;">Wat gebeurt er nu?</div>
+            <div style="display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;">
+              <div style="width:22px;height:22px;background:linear-gradient(135deg,var(--sun),#E8901A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:white;flex-shrink:0;">1</div>
+              <div style="font-size:0.83rem;color:var(--text);line-height:1.5;"><strong>Binnen 24 uur</strong> nemen gecertificeerde installateurs contact op.</div>
+            </div>
+            <div style="display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;">
+              <div style="width:22px;height:22px;background:linear-gradient(135deg,var(--sun),#E8901A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:white;flex-shrink:0;">2</div>
+              <div style="font-size:0.83rem;color:var(--text);line-height:1.5;"><strong>Je ontvangt offertes op maat</strong> voor jouw woning en situatie.</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <div style="width:22px;height:22px;background:linear-gradient(135deg,var(--sun),#E8901A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;color:white;flex-shrink:0;">3</div>
+              <div style="font-size:0.83rem;color:var(--text);line-height:1.5;"><strong>Jij kiest zelf</strong> de beste aanbieder. Geen verplichtingen.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+            <div style="font-size:0.72rem;color:var(--muted);display:flex;align-items:center;gap:4px;"><span style="color:var(--green);">✓</span> Gratis & vrijblijvend</div>
+            <div style="font-size:0.72rem;color:var(--muted);display:flex;align-items:center;gap:4px;"><span style="color:var(--green);">✓</span> Gecertificeerde installateurs</div>
+            <div style="font-size:0.72rem;color:var(--muted);display:flex;align-items:center;gap:4px;">🔒 Privacy gewaarborgd</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="nav-logo">
+    <div class="sun-icon">☀️</div>
+    ZonneOfferte.nl
+  </div>
+  <p>© 2025 ZonneOfferte.nl — Rotterdam & omgeving</p>
+  <p>Gratis offertes van erkende installateurs</p>
+</footer>
+
+<script>
+  function bindForm(formId, btnId) {
+    var form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var naam     = document.getElementById(formId).querySelector('[name="naam"]').value.trim();
+      var email    = document.getElementById(formId).querySelector('[name="email"]').value.trim();
+      var telefoon = document.getElementById(formId).querySelector('[name="telefoon"]').value.trim();
+      var postcode = document.getElementById(formId).querySelector('[name="postcode"]').value.trim();
+      var achternaam = document.getElementById(formId).querySelector('[name="achternaam"]').value.trim();
+      var woning   = document.getElementById(formId).querySelector('[name="woning"]').value;
+      var btn      = document.getElementById(btnId);
+
+      if (!naam || !email || !telefoon || !postcode) {
+        alert('Vul je naam, e-mailadres, telefoonnummer en postcode in.');
+        return;
+      }
+
+      btn.textContent = 'Bezig...';
+      btn.disabled = true;
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '3f667918-b5c2-453c-9564-f72e0f671ee0',
+          subject: 'Nieuwe zonnepanelen aanvraag – Rotterdam',
+          naam: naam,
+          achternaam: achternaam,
+          email: email,
+          telefoon: telefoon,
+          postcode: postcode,
+          woning: woning
+        })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success) {
+          document.getElementById(formId).style.display = 'none';
+          var successId = formId === 'heroForm' ? 'heroSuccess' : 'bottomSuccess';
+          document.getElementById(successId).style.display = 'block';
+        } else {
+          btn.textContent = 'Ontvang gratis offertes →';
+          btn.disabled = false;
+          alert('Er is iets misgegaan. Probeer het opnieuw.');
+        }
+      })
+      .catch(function() {
+        btn.textContent = 'Ontvang gratis offertes →';
+        btn.disabled = false;
+        alert('Er is iets misgegaan. Probeer het opnieuw.');
+      });
+    });
+  }
+
+  bindForm('heroForm',   'heroSubmitBtn');
+  bindForm('bottomForm', 'bottomSubmitBtn');
+</script>
+</body>
+</html>
